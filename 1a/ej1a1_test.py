@@ -1,6 +1,6 @@
 from ej1a1 import fibonacci
 import pytest
-#prova
+
 def test_fibonacci_():
     assert fibonacci(0) == 0, "fibonacci does not return the correct value for input 0. It should be 0"
     assert fibonacci(1) == 1, "fibonacci does not return the correct value for input 1. It should be 1"
