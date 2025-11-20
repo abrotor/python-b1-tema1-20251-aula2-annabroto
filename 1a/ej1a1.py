@@ -41,6 +41,15 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
+    num = 0
+    a = 1
+    b = 1
+    if fibonacci_number > 0 and type(fibonacci_number) == "int":
+        while num <= fibonacci_number:
+            num = num + 1
+            if num > 1:
+                a = a + b
+    return a
 
     
     pass
