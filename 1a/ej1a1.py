@@ -41,19 +41,18 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
-    num = 0
-    a = 1
-    b = 1
-    if fibonacci_number > 0 and type(fibonacci_number) == "int":
-        while num <= fibonacci_number:
-            num = num + 1
-            if num > 1:
-                a = a + b
+    if type(fibonacci_number) != int:
+        raise ValueError("Number must be integer.")
+    elif fibonacci_number < 0:
+        raise ValueError("Number must be greater than 0.")
+    else:
+        a, b = 0 , 1
+    for i in range(fibonacci_number):
+        a, b = b, a + b
     return a
-
     
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-print(fibonacci(10))
+print(fibonacci(4))
