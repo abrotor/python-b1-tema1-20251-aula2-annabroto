@@ -43,8 +43,26 @@ Exemple:
 
 def sum_odd_numbers(list_numbers):
     # Write here your code
+    tnum = ""
+    sum_odd_numbers = 0 
+    tynum = True
+    for num in list_numbers:
+        tnum = tnum + str(num)
+        if type(num) != int:
+            tynum = False
+    vnum = tnum.isdigit()
+    if vnum == False:
+        raise ValueError("els nombres han de ser enters positius")
+    elif tynum == False:
+        raise ValueError("els nombres han de ser INT")
+    else:
+        for num in list_numbers:
+            if num %2 != 0:
+                sum_odd_numbers = sum_odd_numbers + num
+    return sum_odd_numbers
+
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
