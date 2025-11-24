@@ -36,11 +36,7 @@ Exemple:
 
 def obtain_max(list_numbers):
     # Write here your code
-    max = 0
-    for num in list_numbers:
-        if num > max:
-            max = num
-    return max
+    return max(list_numbers)
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
